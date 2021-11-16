@@ -1,0 +1,91 @@
+﻿<Window x:Class="ExpertSystem.ResultWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExpertSystem"
+        mc:Ignorable="d"
+        Title="ResultWindow" Height="450" Width="1500" WindowStyle="ToolWindow" Closed="Window_Closed"
+        >
+    <Grid>
+        <ListView x:Name="myListView"  Padding="10" MouseDoubleClick="myListView_MouseDoubleClick" SelectionChanged="myListView_SelectionChanged" Grid.ColumnSpan="2">
+            <ListView.ItemTemplate >
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical" Width="1450"  Height="auto" Background="AliceBlue" >
+                        <Label Content="{Binding Path=Name}" FontSize="24" Margin="5,0,0,0" ></Label>
+                        <StackPanel Orientation="Horizontal" Width="auto" Height="auto" Margin="10,5,10,10">
+                            <Image Source="{Binding Path=Image}" Width="100" Height="100" Stretch="Fill"></Image>
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Label Content="Применение:" FontSize="16"></Label>
+                                    <Label Content="{Binding Path=Usage}" FontSize="16"></Label>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Label Content="ОС:" FontSize="16"></Label>
+                                    <Label Content="{Binding Path=Usage}" FontSize="16"></Label>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Label Content="Тип жёсткого диска:" FontSize="16"></Label>
+                                    <Label Content="{Binding Path=HddType}" FontSize="16"></Label>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Label Content="Объём жёсткого диска:" FontSize="16"></Label>
+                                    <Label Content="{Binding Path=HddSize}" FontSize="16"></Label>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Label Content="ОЗУ:" FontSize="16"></Label>
+                                    <Label Content="{Binding Path=Ram}" FontSize="16"></Label>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Label Content="Тип видеокарты:" FontSize="16"></Label>
+                                    <Label Content="{Binding Path=VideocardType}" FontSize="16"></Label>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Label Content="Время автономной работы:" FontSize="16"></Label>
+                                    <Label Content="{Binding Path=BatteryLife}" FontSize="16"></Label>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Label Content="Тип дисплея:" FontSize="16"></Label>
+                                    <Label Content="{Binding Path=DisplayType}" FontSize="16"></Label>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Label Content="Разрешение экрана:" FontSize="16"></Label>
+                                    <Label Content="{Binding Path=DisplayResolution}" FontSize="16"></Label>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Label Content="Диагональ экрана:" FontSize="16"></Label>
+                                    <Label Content="{Binding Path=DisplayDiagonal}" FontSize="16"></Label>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Label Content="Частота обновления экрана:" FontSize="16"></Label>
+                                    <Label Content="{Binding Path=DisplayFrequency}" FontSize="16"></Label>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Label Content="Можно поменять ОЗУ?" FontSize="16"></Label>
+                                    <Label Content="{Binding Path=CanReplaceRAM}" FontSize="16"></Label>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Label Content="Можно переставить жёсткий диск?" FontSize="16"></Label>
+                                    <Label Content="{Binding Path=CanReplaceHDD}" FontSize="16"></Label>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Label Content="Есть GSM модуль?" FontSize="16"></Label>
+                                    <Label Content="{Binding Path=HasGSM}" FontSize="16"></Label>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Window>
