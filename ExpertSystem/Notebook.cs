@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Media.Imaging;
-
-namespace ExpertSystem
+﻿
+namespace SimpleFilter
 {
     public class Notebook
     {
@@ -26,29 +20,30 @@ namespace ExpertSystem
         string hasGSM;
         string image;
 
-        public Notebook(string name,string url, string image, string usage,string operativeSystem,string hddType, string hddSize,
-        string ram,string videocardType, string batteryLife,string displayType, string displayResolution, string displayDiagonal,
-        string displayFrequency,string hasOpticDrive, string canReplaceRAM, string canReplaceHDD, string hasGSM)
+        public Notebook(string name, string url, string image, string usage, string operativeSystem, string hddType, string hddSize,
+        string ram, string videocardType, string batteryLife, string displayType, string displayResolution, string displayDiagonal,
+        string displayFrequency, string hasOpticDrive, string canReplaceRAM, string canReplaceHDD, string hasGSM, string CPU, string videocard)
         {
             Name = name;
             Image = image;
-            this.URL = url;
-            this.Usage = usage;
-            this.OS = operativeSystem;
-            this.HddType = hddType;
-            this.HddSize = hddSize;
-            this.Ram = ram;
-            this.VideocardType = videocardType;
-            this.BatteryLife = batteryLife;
-            this.DisplayType = displayType;
-            this.DisplayResolution = displayResolution;
-            this.DisplayDiagonal = displayDiagonal;
-            this.DisplayFrequency = displayFrequency;
-            this.CanReplaceRAM = canReplaceRAM;
-            this.CanReplaceHDD = canReplaceHDD;
-            this.HasGSM = hasGSM;
+            URL = url;
+            Usage = usage;
+            OS = operativeSystem;
+            HddType = hddType;
+            HddSize = hddSize;
+            Ram = ram;
+            VideocardType = videocardType;
+            BatteryLife = batteryLife;
+            DisplayType = displayType;
+            DisplayResolution = displayResolution;
+            DisplayDiagonal = displayDiagonal;
+            DisplayFrequency = displayFrequency;
+            CanReplaceRAM = canReplaceRAM;
+            CanReplaceHDD = canReplaceHDD;
+            HasGSM = hasGSM;
             this.hasOpticDrive = hasOpticDrive;
-
+            this.CPU = CPU;
+            Videocard = videocard;
         }
 
         public string Name { get => name; set => name = value; }
@@ -69,5 +64,7 @@ namespace ExpertSystem
         public string HasGSM { get => hasGSM; set => hasGSM = value; }
         public string URL { get; set; }
         public string HasOpticDrive { get => hasOpticDrive; set => hasOpticDrive = value; }
+        public string CPU { get; set; }
+        public string Videocard { get; set; }
     }
 }
